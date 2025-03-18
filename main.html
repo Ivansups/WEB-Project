@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOIDA</title>
+    <title>Мессенджер</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="some_class1">   
-         <h1>EQ</h1>
+    <section class="messenger-container">
+        <!-- Шапка мессенджера -->
+        <header>Мессенджер</header>
+
+        <main>
+            <!-- Секция списка чатов -->
+            <section class="chat-list-section">
+                <h3>Список чатов</h3>
+                <h3>Здесь будет находиться список пользователей</h3>
+            </section>
+
+            <!-- Секция области чата -->
+            <section class="chat-section">
+                <!-- Заголовок чата -->
+                <section class="chat-header-section">
+                    <h3>Пользователь 1</h3>
+                </section>
+
+                <!-- Сообщения чата -->
+                <section class="messages-section">
+                    <p><strong>Я:</strong> Привет!</p>
+                    <p><strong>Пользователь 1:</strong> Здравствуйте!</p>
+                </section>
+            </section>
+        </main>
+
+        <!-- Нижняя панель (ввод сообщения) -->
+        <footer>
+            <input type="text" placeholder="Введите сообщение...">
+            <button>Отправить</button>
+        </footer>
     </section>
-    <section class = "some_class2">
-        <p>
-            <h2>Some details for developing you can see in my GitHab</h2>
-        </p>
-    </section>
-    <h3><a href="https://github.com/Ivansups/WEB-Project">Training site...</a></h3>
-    <h3><a href="main2.html">Second site</a></h3>
-    <button><a href="main2.html">leeee</a></button>
 </body>
 </html>
