@@ -2,37 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
-    a, a:hover, a:visited {
-        color: inherit;
-        text-decoration: none;
-      }
+a, a:hover, a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 body, html {
     height: 100%;
-    font-family: 'Roboto', Arial, sans-serif; /* Более современный шрифт */
-    background-color: #f7f7f7; /* Мягкий фоновый цвет */
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f7f7f7;
 }
 
 .messenger-container {
     display: flex;
     flex-direction: column;
     height: 100%;
-    border-radius: 10px; /* Закругляем контейнер */
-    overflow: hidden; /* Убираем скроллбары при необходимости */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем мягкую тень */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header {
-    background: linear-gradient(135deg, #87CEEB, #ADD8E6); /* Мягкий градиент с голубыми оттенками */
+    background: linear-gradient(135deg, #87CEEB, #ADD8E6);
     color: white;
     padding: 15px 20px;
     text-align: center;
     font-size: 1.5rem;
-    border-bottom-left-radius: 0; /* Сохраняем закругление */
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05); /* Добавляем внутреннюю тень */
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
 }
 
 main {
@@ -43,48 +43,42 @@ main {
 
 /* Стили для секции списка чатов */
 .chat-list-section {
-    width: 250px;
-    background: linear-gradient(135deg, #F0F8FF, #E6E6FA); /* Пастельные оттенки голубого */
+    width: 30%; /* Ширина 30% от экрана */
+    background: linear-gradient(135deg, #F0F8FF, #E6E6FA);
     padding: 15px;
     overflow-y: auto;
-    border-right: none; /* Убираем жесткую границу */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Добавляем мягкую внутреннюю тень */
-    border-top-right-radius: 10px; /* Закругляем правый верхний угол */
-    border-bottom-right-radius: 10px; /* Закругляем правый нижний угол */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 /* Стили для секции области чата */
 .chat-section {
-    flex-grow: 1;
+    flex-grow: 1; /* Занимает оставшееся пространство */
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #FFF8DC, #F5F5DC); /* Пастельные оттенки кремового */
+    background: linear-gradient(135deg, #FFF8DC, #F5F5DC);
     padding: 15px;
     overflow-y: auto;
-    border-top-left-radius: 10px; /* Закругляем левый верхний угол */
-    border-bottom-left-radius: 10px; /* Закругляем левый нижний угол */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Добавляем мягкую внутреннюю тень */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Стили для заголовка чата */
 .chat-header-section {
-    background: linear-gradient(135deg, #FFDAB9, #FFE4C4); /* Пастельные оттенки персикового */
+    background: linear-gradient(135deg, #FFDAB9, #FFE4C4);
     padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Мягкая граница */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
-    border-radius: 10px; /* Закругляем углы */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Добавляем мягкую внутреннюю тень */
-}
-
-.chat-header-section button{
-    position: fixed;
-    bottom: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .chat-header-section h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #333; /* Темно-серый цвет для текста */
+    color: #333;
 }
 
 /* Стили для секции сообщений чата */
@@ -92,17 +86,17 @@ main {
     flex-grow: 1;
     padding: 10px;
     overflow-y: auto;
-    border-radius: 10px; /* Закругляем углы */
+    border-radius: 10px;
 }
 
 /* Сообщения чата */
 .messages-section p {
     margin: 5px 0;
     padding: 8px 12px;
-    border-radius: 15px; /* Очень закругленные углы */
-    max-width: 70%; /* Ограничиваем ширину сообщений */
-    word-wrap: break-word; /* Перенос слов */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .messages-section p strong {
@@ -110,19 +104,19 @@ main {
 }
 
 .messages-section p:nth-child(odd) {
-    background: #E6E6FA; /* Пастельный фиолетовый для одного пользователя */
-    align-self: flex-start; /* Выравнивание слева */
+    background: #E6E6FA;
+    align-self: flex-start;
 }
 
 .messages-section p:nth-child(even) {
-    background: #FFDAB9; /* Пастельный персиковый для другого пользователя */
-    align-self: flex-end; /* Выравнивание справа */
+    background: #FFDAB9;
+    align-self: flex-end;
 }
 
 .user-profile-button {
     width: 100%;
     padding: 10px;
-    background: linear-gradient(135deg, #87CEEB, #ADD8E6); /* Мягкий градиент голубого */
+    background: linear-gradient(135deg, #87CEEB, #ADD8E6);
     color: white;
     border: none;
     border-radius: 5px;
@@ -133,22 +127,12 @@ main {
 }
 
 footer {
-    text-align: center;
-    background: linear-gradient(135deg, #F0F8FF, #E6E6FA); /* Мягкий градиент с голубыми оттенками */
+    background: linear-gradient(135deg, #F0F8FF, #E6E6FA);
     padding: 10px;
     display: flex;
     align-items: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Мягкая граница */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Добавляем мягкую внутреннюю тень */
-}
-
-.footer-main{
-    align-items: center;
-    background: linear-gradient(135deg, #F0F8FF, #E6E6FA); /* Мягкий градиент с голубыми оттенками */
-    padding: 10px;
-    display: flex;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Мягкая граница */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Добавляем мягкую внутреннюю тень */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 footer input[type="text"] {
@@ -156,32 +140,33 @@ footer input[type="text"] {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px; /* Очень закругленные углы */
-    background: #F5F5F5; /* Легкий серый фон */
-    transition: all 0.3s ease; /* Анимация при наведении */
+    border-radius: 20px;
+    background: #F5F5F5;
+    transition: all 0.3s ease;
 }
 
 footer input[type="text"]:focus {
     outline: none;
-    border-color: #ADD8E6; /* Голубой цвет при фокусе */
-    box-shadow: 0 0 5px rgba(173, 216, 230, 0.5); /* Мягкая тень при фокусе */
+    border-color: #ADD8E6;
+    box-shadow: 0 0 5px rgba(173, 216, 230, 0.5);
 }
 
 footer button {
     padding: 10px 20px;
     border: none;
-    background: linear-gradient(135deg, #87CEEB, #ADD8E6); /* Мягкий градиент голубого */
+    background: linear-gradient(135deg, #87CEEB, #ADD8E6);
     color: white;
-    border-radius: 20px; /* Очень закругленные углы */
+    border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease; /* Анимация при наведении */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer button:hover {
-    background: linear-gradient(135deg, #6495ED, #87CEEB); /* Более насыщенный градиент при наведении */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Немного больше тени */
+    background: linear-gradient(135deg, #6495ED, #87CEEB);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* Стили для профиля пользователя */
 .profile-container {
     display: flex;
