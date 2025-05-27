@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="app-profile-container">
+    <header class="app-profile-header">
+        <h1 class="app-profile-title">Профиль пользователя</h1>
+    </header>
+    <main class="app-profile-card">
+        <section class="app-user-info">
+            <img src="user-avatar.jpg" alt="Аватар пользователя" class="app-user-avatar">
+            <h2 class="app-user-name">Имя пользователя: Пользователь 1</h2>
+            <p class="app-user-detail"><strong>Электронная почта:</strong> user1@example.com</p>
+            <p class="app-user-detail"><strong>Телефон:</strong> +123 456 789</p>
+            <p class="app-user-detail"><strong>Статус:</strong> Активен</p>
+            <p class="app-user-detail"><strong>Дата регистрации:</strong> 01.01.2023</p>
+        </section>
+        <section class="app-user-bio">
+            <h3 class="app-bio-title">О пользователе</h3>
+            <p class="app-bio-text">Это пример описания пользователя.</p>
+        </section>
+    </main>
+    <footer class="app-profile-footer">
+        <button class="app-action-button app-action-primary">
+            <a th:href="@{/registration}" class="app-action-link">Регистрация</a>
+        </button>
+        <button class="app-action-button app-action-secondary">
+            <a th:href="@{/}" class="app-action-link">Вернуться в чат</a>
+        </button>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

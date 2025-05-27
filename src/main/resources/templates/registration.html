@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="app-registration-container">
+    <div class="app-registration-card">
+        <h2 class="app-registration-title">Регистрация</h2>
+        <form id="app-registration-form" class="app-registration-form" novalidate>
+            <div class="app-form-group">
+                <label for="app-reg-name" class="app-form-label">Имя</label>
+                <input type="text" id="app-reg-name" class="app-form-input"
+                       pattern="^[a-zA-Zа-яА-ЯёЁ\s]{2,}$" required>
+                <div class="app-form-error" id="app-name-error"></div>
+            </div>
+
+            <div class="app-form-group">
+                <label for="app-reg-email" class="app-form-label">Email</label>
+                <input type="email" id="app-reg-email" class="app-form-input"
+                       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                <div class="app-form-error" id="app-email-error"></div>
+            </div>
+
+            <div class="app-form-group">
+                <label for="app-reg-password" class="app-form-label">Пароль</label>
+                <input type="password" id="app-reg-password" class="app-form-input"
+                       minlength="8" required>
+                <div class="app-form-error" id="app-password-error"></div>
+                <div class="app-password-hint">
+                    Пароль должен содержать минимум 8 символов, включая цифры и буквы
+                </div>
+            </div>
+
+            <div class="app-form-group">
+                <label for="app-reg-confirm" class="app-form-label">Подтверждение пароля</label>
+                <input type="password" id="app-reg-confirm" class="app-form-input" required>
+                <div class="app-form-error" id="app-confirm-error"></div>
+            </div>
+
+            <button type="submit" class="app-form-submit">Зарегистрироваться</button>
+        </form>
+        <div class="app-registration-footer">
+            Уже есть аккаунт? <a th:href="@{/login}" class="app-registration-link">Войти</a>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/app-registration.js}"></script>
+<script>
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && e.target.tagName !== 'INPUT') {
+            e.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
